@@ -11,8 +11,9 @@ namespace clean.domain.entities
             return Consultas.FirstOrDefault(_ => _.Horario.data == horario.Data) == null;
         }
 
-        public bool MarcarConsulta(Horario horario, Guid pacienteId, Guid especialistaId)
+        public bool MarcarConsulta(DateTime data, Guid pacienteId, Guid especialistaId)
         {
+            var horario = new(data);
             if (!HorarioDisponivel(horario)) return false;
             Consultas.Add(new (horario, pacienteId, especialistaId));
             return true;

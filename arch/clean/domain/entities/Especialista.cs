@@ -4,6 +4,7 @@ namespace clean.domain.entities
     {
         public Guid Guid { get; } = new Guid();
         public string Nome { get; } = nome;
+        public Guid AgendaId { get; } = agendaId;
         public EspecialidadeEnum Especialidade { get; } = especialidadeEnum;
     }   
 
