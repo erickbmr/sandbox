@@ -28,3 +28,8 @@ docker service ls
 docker stop [CONTAINER_ID]
 ```
 
+7. remove a service
+```
+docker service rm [SERVICE_ID]
+```
+
