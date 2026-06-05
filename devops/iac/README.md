@@ -17,3 +17,8 @@ terraform plan
 ```
 terraform apply
 ```
+
+5. destroy
+```
+terraform destroy
+```
