@@ -22,3 +22,5 @@ terraform apply
 ```
 terraform destroy
 ```
+
+check out developer.hashicorp.com
