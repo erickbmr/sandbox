@@ -3,12 +3,17 @@
 terraform init
 ```
 
-2. plan
+2. validate
+```
+terraform validate
+```
+
+3. plan
 ```
 terraform plan
 ```
 
-3. apply
+4. apply
 ```
 terraform apply
 ```
