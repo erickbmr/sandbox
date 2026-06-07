@@ -6,6 +6,11 @@ namespace designpatterns.factory
         {
             return new WindowsScrollBar();
         }
+
+        public override IButton CreateButton()
+        {
+            return new WindowsButton();
+        }
     }
 
     class WindowsScrollBar : IScrollBar
@@ -22,6 +27,16 @@ namespace designpatterns.factory
         public bool HasItems()
         {
             return Items > 0;
+        }
+    }
+
+    class WindowsButton : IButton
+    {
+        public string Text { get; } = "windows";
+
+        public string WithAriaLabel()
+        {
+            return "aria-label=\"" + Text.ToUpper() + "\"";
         }
     }
 }

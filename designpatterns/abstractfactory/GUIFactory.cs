@@ -4,10 +4,11 @@ namespace designpatterns.factory
     {
         public abstract IScrollBar CreateScrollBar();
 
-        public bool IncludeScrollBar()
+        public abstract IButton CreateButton();
+
+        public static string Include()
         {
-            var bar = CreateScrollBar();
-            return bar.HasItems();
+            return "value: ";
         }
     }
 
@@ -19,5 +20,12 @@ namespace designpatterns.factory
 
         string ToCode();
         bool HasItems();
+    }
+
+    interface IButton
+    {
+        string Text;
+
+        string WithAriaLabel();
     }
 }

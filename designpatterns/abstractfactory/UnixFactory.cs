@@ -6,6 +6,11 @@ namespace designpatterns.factory
         {
             return new UnixScrollBar();
         }
+
+        public override IButton CreateButton()
+        {
+            return new UnixButton();
+        }
     }
 
     class UnixScrollBar : IScrollBar
@@ -22,6 +27,16 @@ namespace designpatterns.factory
         public bool HasItems()
         {
             return Items > 0;
+        }
+    }
+
+    class UnixButton : IButton
+    {
+        public string Text { get; } = "unix";
+
+        public string WithAriaLabel()
+        {
+            return "aria-label=\"" + Text + "\"";
         }
     }
 }
